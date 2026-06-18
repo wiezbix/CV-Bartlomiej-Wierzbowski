@@ -1,0 +1,427 @@
+:root {
+    --primary-color: #1e293b;
+    --secondary-color: #3b82f6;
+    --bg-main: #e2e8f0;
+    --bg-card: #ffffff;
+    --bg-sidebar: #f8fafc;
+    --text-dark: #334155;
+    --text-light: #64748b;
+    --border-color: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text-dark);
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    gap: 20px;
+}
+
+.prof-picture {
+    flex-shrink: 0;
+}
+
+.picture {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.name-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.name-area h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.name-area p {
+    font-size: 16px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.contact-area {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-box img {
+    filter: invert(1);
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.contact-box a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.2s ease;
+    word-break: break-word;
+}
+
+.contact-box a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- MAIN CONTAINER --- */
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: var(--bg-sidebar);
+    padding: 30px 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.content {
+    flex: 2;
+    padding: 30px;
+}
+
+/* --- WSPÓLNE STYLE DLA SEKCJI --- */
+.section-block {
+    margin-bottom: 35px;
+}
+
+.section-block h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* --- SIDEBAR --- */
+.date {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.school-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.school-address {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.skills-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.skills-tags li {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.lang-item {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.language-select {
+    font-weight: 600;
+}
+
+/* --- CONTENT --- */
+.facts-about-me {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.projects-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--bg-card);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-color: var(--secondary-color);
+}
+
+.project-card img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.project-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.project-info p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: var(--text-light);
+}
+
+.projects-tech {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.exp-job {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.exp-company {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.exp-date {
+    font-size: 13px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.exp-tasks {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN (TYLKO DLA EKRANÓW)
+   ========================================= */
+
+@media screen and (max-width: 850px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .name-area { align-items: center; }
+    .contact-area { align-items: center; margin-top: 10px; }
+    .main-container { flex-direction: column; }
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .projects-area { grid-template-columns: 1fr; }
+    .picture { height: 110px; width: 110px; }
+    .name-area h1 { font-size: 24px; }
+    .job-header { flex-direction: column; gap: 5px; }
+}
+
+
+/* =========================================
+   STYL POD WYDRUK - GWARANCJA 1 STRONY I ORYGINALNEGO UKŁADU
+   ========================================= */
+
+@media print {
+    @page { margin: 0; }
+
+    body {
+        background-color: white;
+        padding: 0;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .card {
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0;
+        border: none;
+    }
+
+    /* --- WYMUSZENIE POZIOMEGO UKŁADU NAGŁÓWKA --- */
+    .header {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: left !important;
+        background-color: var(--primary-color) !important;
+        color: white !important;
+        padding: 15px 25px !important;
+        gap: 15px !important;
+    }
+
+    .picture {
+        height: 85px !important;
+        width: 85px !important;
+        border: 3px solid white !important;
+        margin-bottom: 0 !important;
+    }
+
+    .name-area {
+        align-items: flex-start !important;
+    }
+
+    .name-area h1 {
+        font-size: 22px !important;
+        color: white !important;
+        margin-bottom: 2px !important;
+    }
+
+    .name-area p {
+        font-size: 13px !important;
+        color: #cbd5e1 !important;
+    }
+
+    .contact-area {
+        align-items: flex-start !important;
+        gap: 6px !important;
+        margin-top: 0 !important;
+    }
+
+    .contact-box a { color: white !important; font-size: 11px !important; }
+    .contact-box img { filter: invert(1) !important; height: 12px !important; }
+
+    /* --- WYMUSZENIE PODZIAŁU NA LEWĄ (SIDEBAR) I PRAWĄ STRONĘ --- */
+    .main-container {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .sidebar {
+        flex: 1 !important;
+        border-right: 1px solid var(--border-color) !important;
+        border-bottom: none !important;
+        background-color: var(--bg-sidebar) !important;
+        padding: 15px 20px !important;
+    }
+
+    .content {
+        flex: 2 !important;
+        padding: 15px 25px !important;
+    }
+
+    /* --- KOMPRESJA TEKSTU I ODSTĘPÓW (Żeby weszło na 1 stronę) --- */
+    .section-block { margin-bottom: 12px !important; }
+    .section-block h2 { font-size: 14px !important; margin-bottom: 6px !important; padding-bottom: 2px !important; }
+
+    .facts-about-me, .exp-tasks li, .skills-list li, .school-name, .school-address, .lang-item {
+        font-size: 11px !important; line-height: 1.3 !important;
+    }
+    .exp-job { font-size: 12px !important; }
+    .exp-company, .exp-date { font-size: 11px !important; }
+    .skills-list, .exp-tasks { padding-left: 15px !important; }
+    
+    .skills-tags { gap: 4px !important; }
+    .skills-tags li {
+        background-color: var(--primary-color) !important;
+        color: white !important; padding: 4px 8px !important; font-size: 10px !important; border: none !important;
+    }
+
+    /* Wymuszenie 2 kolumn w projektach */
+    .projects-area {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
+    .project-card { padding: 8px 10px !important; }
+    .project-card img { height: 20px !important; width: 20px !important; margin-bottom: 5px !important; }
+    .project-info h3 { font-size: 12px !important; margin-bottom: 2px !important; }
+    .project-info p { font-size: 10px !important; line-height: 1.2 !important; margin-bottom: 4px !important; }
+    .projects-tech { font-size: 9px !important; }
+}
